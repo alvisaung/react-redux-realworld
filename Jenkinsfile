@@ -18,7 +18,6 @@ pipeline {
         }
         stage("Deploying") {
             steps {
-                sh 'sudo ln -s /etc/nginx/sites-available/jenkins-react-app /etc/nginx/sites-enabled/jenkins-react-app'
                  sh "sudo rm -rf /var/www/jenkins-react-app"
                 sh "sudo cp -r ${WORKSPACE}/build/ /var/www/jenkins-react-app/"
             }
