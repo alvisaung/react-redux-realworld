@@ -17,7 +17,7 @@ pipeline {
         }
         stage("Deploying") {
             steps {
-                sh "npm start"
+                sh './jenkins/deliver.sh'
             }
         }
     }
