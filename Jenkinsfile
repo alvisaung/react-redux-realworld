@@ -16,6 +16,7 @@ pipeline {
         }
         stage("Deploying") {
             steps {
+                sh "chmod +x -R ${env.WORKSPACE}"
                  sh './jenkins/Deploy.sh'
             }
         }
