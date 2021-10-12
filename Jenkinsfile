@@ -12,7 +12,6 @@ pipeline {
         stage("Install dependeicies") {
             steps {
                 sh 'npm install'
-                sh 'docker run alvisaung/todo-app'
             }
         }
         stage("Deploying") {
