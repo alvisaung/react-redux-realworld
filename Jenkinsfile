@@ -15,8 +15,9 @@ pipeline {
                 sh 'npm rebuild'
             }
         }
-        stage("Running") {
+        stage("Deploying") {
             steps {
+                sh 'npm run build'
                 sh 'npm start'
             }
         }
